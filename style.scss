@@ -1,8 +1,26 @@
-$white: #FFFFFF;
-// variables
+@import url(/css/header.scss);
+@import url(/css/fonts.scss);
+@import url(/css/reset.scss);
+@import url(/css/element.scss);
+@import url(/css/footer.scss);
 
+
+$white: #FFFFFF;
+$grey: #F1F4F7;
+$primary: #1E3A8F;
+
+// variables
+.container{
+  max-width: 1218px;
+  margin: 0 auto;
+}
 .category{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
+}
+.category-item{
+  width: 282px;
+  height: 382px;
+  background: $grey;
 }
