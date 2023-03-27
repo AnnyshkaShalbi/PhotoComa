@@ -5,43 +5,96 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="/css/style.css"> -->
-  <link rel="stylesheet" href="/css/reset.css"> 
-  <link rel="stylesheet" href="/css/element.css">
-  <link rel="stylesheet" href="/css/fonts.css"> 
   <link rel="stylesheet" href="/css/main.css">
   <title>Photo Coma</title>
 </head>
+
 <body>
-  <div class="container">
-    <header class="header">
-      <div>
-        <img src="src/logo.svg" alt="Логотип">
+
+  <header class="header">
+    <div class="container">
+      <div class="inner-header">
+        <a href="/">
+          <img src="src/logo.svg" alt="Логотип">
+        </a>
+        <a href="tel:+7 (915) 431-06-66">+7 (915) 431-06-66</a>
+        <nav>
+          <ul class="menu-list">
+            <li class="menu-list_item">
+              <a href="#">
+                <img src="./src/map_pin.svg" alt="Местоположение" />
+                Москва
+              </a>
+            </li>
+            <li class="menu-list_item">
+              <a href="#">
+                Контакты
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./src/socials/whatsup.svg" alt="Whats'up" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a class="btn">
+          Заказать переплёт диплома
+          <img src="./src/arrow_right.svg" alt="Заказать" />
+        </a>
       </div>
-      <nav>
-        <ul>
-          <li><a>Москва</a></li>
-          <li><a>Контакты</a></li>
-          <!-- <li></li> -->
+    </div>
+    <div class="sublist">
+      <div class="container">
+        <ul class="menu-sublist">
+          <li class="menu-list_item">
+            <a href="#">
+              Проектная документация
+            </a>
+          </li>
+          <li class="menu-list_item">
+            <a href="#">
+              Копицентр
+            </a>
+          </li>
         </ul>
-      </nav>
-      <a href="tel:+7 (915) 431-06-66">+7 (915) 431-06-66</a>
-      <button class="btn">Заказать переплёт диплома</button>
-    </header>
-    <main class="main">
-      <section class="category">
-        <div class="category-item"></div>
-        <div class="category-item"></div>
-        <div class="category-item"></div>
-        <div class="category-item"></div>
-        <div class="category-item"></div>
-        <div class="category-item"></div>
-        <div class="category-item"></div>
-        <div class="category-item"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <section class="printOrder">
+        <div class="main-img"></div>
+        <div class="printOrder-desc">
+          <h1>
+            печать д<span class="circle-text"></span>кументов,</br>
+            проектной документации,</br>
+            твёрдый переплёт дипл<span class="circle-text"></span>мов
+          </h1>
+          <p>Описание Описание Описание Описание Описание Описание
+            Описание Описание Описание Описание Описание</p>
+          <a href="#" class="btn">
+            Заказать печать
+            <img src="./src/arrow_right.svg" alt="Заказать" />
+          </a>
+        </div>
       </section>
-    </main>
-    <footer class="footer"></footer>
-  </div>
+      <section class="category">
+        <div class="category-item blue-border_up"></div>
+        <div class="category-item"></div>
+        <div class="category-item"></div>
+        <div class="category-item blue-border_up"></div>
+        <div class="category-item"></div>
+        <div class="category-item blue-border_down"></div>
+        <div class="category-item"></div>
+        <div class="category-item blue-border_down"></div>
+      </section>
+      <section class="emblem"></section>
+    </div>
+
+  </main>
+  <footer class="footer"></footer>
+
 
 </body>
 
