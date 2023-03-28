@@ -34,6 +34,7 @@ h4,
 h5,
 h6{
   font-family: 'Tenor Sans';
+  text-transform: uppercase;
 }
 body {
   min-height: 100vh;
@@ -76,18 +77,19 @@ $white: #FFFFFF;
 $grey: #F1F4F7;
 $primary: #1E3A8F;
 $text-primary: #141D38;
+$text-secondary: #464F6A;
 // variables
 
 @font-face {
-	font-family: 'Tenor Sans', sans-serif;
+	font-family: 'Tenor Sans';
 	src: url('/fonts/TenorSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans';
 	src: url('/fonts/NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Inter', sans-serif;
+	font-family: 'Inter';
 	src: url('/fonts/Inter-Regular.ttf') format('truetype');
 }
 // fonts
@@ -100,7 +102,21 @@ body{
   margin: 0 auto;
 }
 section{
-  padding-bottom: 150px;
+  margin-bottom: 150px;
+}
+.title{
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 60px;
+}
+.title-general{
+  text-align: center;
+}
+.desc{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+  color: $text-secondary;
 }
 // elements
 .circle-text{
@@ -166,10 +182,6 @@ section{
     position: absolute;
     top: 50px;
     right: 0;
-    font-weight: 400;
-    font-size: 46px;
-    line-height: 60px;
-    text-transform: uppercase;
   }
 }
 // section category
@@ -184,13 +196,14 @@ section{
   background: $grey;
   // position: relative;
   .blue-border_up::before{
+    content: "";
+    width: 282px;
+    height: 282px;
     position: relative;
+    top: -15px;
+    right: 15px;
     border: 2px solid $primary;
     background: transparent;
-  }
-  .blue-border_up{
-    // top: -15px;
-    // right: -15px;
   }
 }
 .btn{
@@ -204,4 +217,82 @@ section{
   outline: none;
   cursor: pointer;
   font-family: 'Noto Sans';
+}
+// section emblem
+.emblem{
+  background: $grey;
+  height: 360px;
+  position: relative;
+  h2{
+    position: absolute;
+    left: 40px;
+    top: -90px;
+  }
+}
+.order-emblem{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+}
+.brand-name{
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+// section about
+.about-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+// section location
+
+// footer
+.footer{
+  background: $text-primary;
+  color: #FFFFFF;
+  padding: 80px 0;
+}
+.footer-inner{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-item{
+  display: flex;
+  flex-direction: column;
+  .footer-item_desc{
+    margin-top: 57px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+.footer-item_socials{
+  .socials{
+    display: flex;
+    justify-content: center;
+    .socials-icon:last-child{
+      margin-right: 0;
+    }
+  }
+}
+.footer-item_number{
+  align-items: flex-end;
+}
+.socials-icon{
+  margin-right: 30px;
+}
+.number{
+  display: flex;
+  align-items: center;
+  span{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
 }
