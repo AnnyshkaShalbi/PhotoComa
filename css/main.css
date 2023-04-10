@@ -140,6 +140,12 @@ section {
   align-items: center;
 }
 
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .menu-list {
   display: flex;
 }
