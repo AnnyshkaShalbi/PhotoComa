@@ -117,6 +117,7 @@ section{
   font-size: 18px;
   line-height: 35px;
   color: $text-secondary;
+  font-family: 'Inter';
 }
 // elements
 .circle-text{
@@ -134,7 +135,12 @@ section{
 .header{
   border-bottom: 1px solid $primary;
   padding-top: 20px;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, .9);
 }
 .inner-header{
   display: flex;
@@ -145,13 +151,58 @@ section{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding-left: 70px;
+}
+.phone{
+  color: $text-primary;
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 400;
 }
 .menu-list{
   display: flex;
-  
+  align-items: center;
+  .menu-list_item{
+    &:first-child::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -30px;
+      width: 16px;
+      height: 20px;
+      background: url('../src/map_pin.svg') no-repeat;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+    }
+    &:nth-child(2)::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -15px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: $text-primary;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
 }
 .menu-list_item{
   font-family: 'Noto Sans';
+  position: relative;
+  padding-right: 30px;
   a{
     color: $text-primary;
   }
@@ -167,6 +218,9 @@ section{
   align-items: center;
 }
 // section print order
+.main{
+  padding-top: 160px;
+}
 .printOrder{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -175,7 +229,7 @@ section{
   margin-top: 85px;
 }
 .main-img{
-  background: $grey;
+  // background: $grey;
   width: 592px;
   height: 670px;
 }
@@ -183,7 +237,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  h1{
+  .title{
     position: absolute;
     top: 50px;
     right: 0;
@@ -199,12 +253,12 @@ section{
   width: 282px;
   height: 282px;
   background: $grey;
-  // position: relative;
-  .blue-border_up::before{
+  position: relative;
+  &.blue-border_up::before{
     content: "";
     width: 282px;
     height: 282px;
-    position: relative;
+    position: absolute;
     top: -15px;
     right: 15px;
     border: 2px solid $primary;
@@ -225,10 +279,13 @@ section{
 }
 // section emblem
 .emblem{
-  background: $grey;
+  // background: $grey;
+  background: url('../src/image/copycom.jpg') no-repeat;
+  background-size: center center;
   height: 360px;
   position: relative;
-  h2{
+  padding: 40px;
+  .title{
     position: absolute;
     left: 40px;
     top: -90px;
@@ -239,7 +296,8 @@ section{
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  width: 100%;
+  // width: 100%;
+  width: 93%;
   bottom: 40px;
 }
 .brand-name{
@@ -255,7 +313,44 @@ section{
   grid-gap: 30px;
 }
 // section location
-
+.location{
+  &-subtitle{
+    padding: 50px 0;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-primary;
+    img{
+      margin-left: 30px;
+    }
+  }
+  &-address{
+    padding-top: 50px;
+    .adress-block{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+.contacts{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  &-right{
+    text-align: right;
+    background: transparent;
+    justify-content: center;
+  }
+  &-left{
+    text-align: left;
+    background: transparent;
+  }
+}
 // footer
 .footer{
   background: $text-primary;

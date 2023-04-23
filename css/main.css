@@ -115,6 +115,7 @@ section {
   font-size: 18px;
   line-height: 35px;
   color: #464F6A;
+  font-family: "Inter";
 }
 
 .circle-text {
@@ -132,6 +133,12 @@ section {
 .header {
   border-bottom: 1px solid #1E3A8F;
   padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .inner-header {
@@ -144,14 +151,59 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding-left: 70px;
+}
+
+.phone {
+  color: #141D38;
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 400;
 }
 
 .menu-list {
   display: flex;
+  align-items: center;
+}
+.menu-list .menu-list_item:first-child::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -30px;
+  width: 16px;
+  height: 20px;
+  background: url("../src/map_pin.svg") no-repeat;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}
+.menu-list .menu-list_item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -15px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #141D38;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .menu-list_item {
   font-family: "Noto Sans";
+  position: relative;
+  padding-right: 30px;
 }
 .menu-list_item a {
   color: #141D38;
@@ -168,6 +220,10 @@ section {
   align-items: center;
 }
 
+.main {
+  padding-top: 160px;
+}
+
 .printOrder {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -177,7 +233,6 @@ section {
 }
 
 .main-img {
-  background: #F1F4F7;
   width: 592px;
   height: 670px;
 }
@@ -187,7 +242,7 @@ section {
   flex-direction: column;
   justify-content: flex-end;
 }
-.printOrder-desc h1 {
+.printOrder-desc .title {
   position: absolute;
   top: 50px;
   right: 0;
@@ -203,12 +258,13 @@ section {
   width: 282px;
   height: 282px;
   background: #F1F4F7;
+  position: relative;
 }
-.category-item .blue-border_up::before {
+.category-item.blue-border_up::before {
   content: "";
   width: 282px;
   height: 282px;
-  position: relative;
+  position: absolute;
   top: -15px;
   right: 15px;
   border: 2px solid #1E3A8F;
@@ -229,11 +285,13 @@ section {
 }
 
 .emblem {
-  background: #F1F4F7;
+  background: url("../src/image/copycom.jpg") no-repeat;
+  background-size: center center;
   height: 360px;
   position: relative;
+  padding: 40px;
 }
-.emblem h2 {
+.emblem .title {
   position: absolute;
   left: 40px;
   top: -90px;
@@ -244,7 +302,7 @@ section {
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  width: 100%;
+  width: 93%;
   bottom: 40px;
 }
 
@@ -259,6 +317,44 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+}
+
+.location-subtitle {
+  padding: 50px 0;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #141D38;
+}
+.location-subtitle img {
+  margin-left: 30px;
+}
+.location-address {
+  padding-top: 50px;
+}
+.location-address .adress-block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding-bottom: 30px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+}
+.contacts-right {
+  text-align: right;
+  background: transparent;
+  justify-content: center;
+}
+.contacts-left {
+  text-align: left;
+  background: transparent;
 }
 
 .footer {
