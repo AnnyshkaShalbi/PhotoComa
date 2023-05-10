@@ -24,3 +24,19 @@ const isMobile = {
     );
   },
 };
+
+if(isMobile.any()){
+  document.body.classList.add('_touch')
+}else{
+  document.body.classList.add('_pc')
+}
+
+// menu burger
+const iconMenu = document.querySelector('.menu_icon');
+const menuBody = document.querySelector('.header_menu');
+
+iconMenu.addEventListener('click', ()=>{
+  document.body.classList.toggle('_lock');
+  iconMenu.classList.toggle('_active');
+  menuBody.classList.toggle('_active');
+});
