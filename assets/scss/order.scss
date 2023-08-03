@@ -1,0 +1,18 @@
+.order{
+  padding-top: 25px;
+
+  .desc{
+    max-width: 720px;
+  }
+}
+
+.step{
+  background-color: var(--primary);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

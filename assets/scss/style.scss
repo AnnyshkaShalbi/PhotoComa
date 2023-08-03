@@ -1,0 +1,102 @@
+@import 'utils/fonts.scss';
+@import 'utils/variables.scss';
+@import 'utils/elements.scss';
+@import 'main/main.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'order.scss';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Tenor Sans';
+  text-transform: uppercase;
+}
+html, #app{
+  height: var(--height);
+}
+body {
+  height: var(--height);
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.general{
+  min-height: var(--height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body._lock{
+  overflow: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a{
+  text-decoration: none;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+[type=checkbox], [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.container{
+  max-width: 1218px;
+  margin: 0 auto;
+}
+section{
+  margin-bottom: 150px;
+}
