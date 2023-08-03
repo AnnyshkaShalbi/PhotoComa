@@ -6,13 +6,90 @@
   }
 }
 
+.steps{
+  display: flex;
+  gap: 30px;
+  padding: 40px 0;
+
+  &-item{
+    display: flex;
+    gap: 15px;
+  }
+
+  &-info{
+    &_desc{
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 22px;
+      max-width: 235px;
+    }
+  }
+}
+
 .step{
-  background-color: var(--primary);
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-ligth);
   width: 35px;
   height: 35px;
+  color: var(--white);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+
+  &-active{
+    background-color: var(--primary);
+  }
+}
+
+.diploma-color{
+  display: flex;
+  gap: 60px;
+}
+
+.title-block{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.radio-wrap{
+  display: flex;
+  gap: 15px;
+}
+
+.covers{
+  display: flex;
+  gap: 30px;
+  padding-top: 15px;
+}
+
+// emblems
+.emblems{
+  display: flex;
+  gap: 30px;
+
+  .emblem{
+    &-item{
+      &_img{
+        width: 95px;
+        height: 95px;
+        background: var(--grey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        // img{
+        //   height: 50px;
+        //   width: 100%;
+        // }
+      }
+    }
+  }
+
+  
 }

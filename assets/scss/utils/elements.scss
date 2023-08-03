@@ -1,3 +1,87 @@
+$indents: (
+  0: 0px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  8: 8px,
+  10: 10px,
+  12: 12px,
+  14: 14px,
+  15: 15px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  22: 22px,
+  24: 24px,
+  25: 25px,
+  26: 26px,
+  28: 28px,
+  30: 30px,
+  32: 32px,
+  34: 34px,
+  35: 35px,
+  36: 36px,
+  40: 40px,
+  50: 50px,
+  60: 60px,
+  70: 70px,
+  80: 80px,
+  90: 90px,
+  100: 100px
+);
+
+// padding, margin
+@each $index,
+$indent in $indents {
+  .pt_#{$index} {
+    padding-top: $indent;
+  }
+
+  .pb_#{$index} {
+    padding-bottom: $indent;
+  }
+
+  .pl_#{$index} {
+    padding-left: $indent;
+  }
+
+  .pr_#{$index} {
+    padding-right: $indent;
+  }
+
+  .pX_#{$index} {
+    padding: 0 $indent;
+  }
+
+  .pY_#{$index} {
+    padding: $indent 0;
+  }
+
+  .mt_#{$index} {
+    margin-top: $indent;
+  }
+
+  .mb_#{$index} {
+    margin-bottom: $indent;
+  }
+
+  .ml_#{$index} {
+    margin-left: $indent;
+  }
+
+  .mr_#{$index} {
+    margin-right: $indent;
+  }
+
+  .mX_#{$index} {
+    margin: 0 $indent;
+  }
+
+  .mY_#{$index} {
+    margin: $indent 0;
+  }
+}
+
 .circle-text{
   background: var(--primary);
   width: 36px;
@@ -22,10 +106,75 @@
   font-weight: 400;
   line-height: 40px;
 }
+.title-often{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .desc{
   font-weight: 400;
   font-size: 18px;
   line-height: 35px;
   color: var(--text-secondary);
   font-family: 'Inter';
+}
+
+// checkbox
+.radio-blue, .radio-red{
+  input{
+    display: none;
+
+    &:checked ~ label {
+      box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem var(--white);
+    }
+
+    &:checked ~ label::after, .radio__2 input:checked ~ label::after {
+      background: var(--primary);
+    }
+  }
+
+  [type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  label{
+    box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem var(--white);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+
+    &:after{
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      background: #9baacf;
+      border-radius: 50%;
+      transition: 0.3s ease;
+
+      @media (max-width: 767px){
+          width: 0.8rem;
+          height: 0.8rem;
+      }
+    }
+
+    @media (max-width: 767px){
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  } 
+}
+
+.radio-red{
+  &:checked ~ label::after, .radio__2 input:checked ~ label::after {
+    background: var(--red);
+  }
 }
