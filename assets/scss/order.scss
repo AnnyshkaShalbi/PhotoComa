@@ -1,23 +1,31 @@
-.order{
+.order {
   padding-top: 25px;
+  font-family: 'Inter';
 
-  .desc{
+  .desc {
     max-width: 720px;
   }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
 }
 
-.steps{
+.steps {
   display: flex;
   gap: 30px;
   padding: 40px 0;
 
-  &-item{
+  &-item {
     display: flex;
     gap: 15px;
   }
 
-  &-info{
-    &_desc{
+  &-info {
+    &_desc {
       color: var(--text-secondary);
       font-size: 14px;
       line-height: 22px;
@@ -26,7 +34,7 @@
   }
 }
 
-.step{
+.step {
   display: block;
   display: flex;
   justify-content: center;
@@ -41,48 +49,64 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 
-  &-active{
+  &-active {
     background-color: var(--primary);
   }
 }
 
-.diploma-color{
+.diploma-color {
   display: flex;
   gap: 60px;
 }
 
-.title-block{
+.title-block {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.radio-wrap{
+.radio-wrap {
   display: flex;
   gap: 15px;
 }
 
-.covers{
+.covers {
   display: flex;
   gap: 30px;
-  padding-top: 15px;
+
+  &-item {
+    &_img {
+      width: 220px;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--grey);
+
+      img {
+        width: 130px;
+        height: auto;
+      }
+
+    }
+  }
 }
 
 // emblems
-.emblems{
+.emblems {
   display: flex;
   gap: 30px;
 
-  .emblem{
-    &-item{
-      &_img{
+  .emblem {
+    &-item {
+      &_img {
         width: 95px;
         height: 95px;
         background: var(--grey);
         display: flex;
         justify-content: center;
         align-items: center;
-  
+
         // img{
         //   height: 50px;
         //   width: 100%;
@@ -91,5 +115,5 @@
     }
   }
 
-  
+
 }

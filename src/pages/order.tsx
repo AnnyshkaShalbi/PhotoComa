@@ -86,16 +86,16 @@ const emblems = [
 
 export default function (data, children) {
   return (
-    <section class="order">
+    <div class="order">
       <h2 class="title-secondary">твёрдый переплёт дипломов</h2>
       <p class="desc">Твердый переплет сохранит документы в идеальном состоянии, повысит презентабельность их внешнего вида. Дипломы и диссертации будут защищены от посторонних воздействий и качественно скреплены.</p>
       <div class="steps">
         {
-          steps.map((item, index)=>{
-            return(
+          steps.map((item, index) => {
+            return (
               <div class="steps-item">
                 <span class={["step", item.active ? "step-active" : null]}>
-                  {index+1}
+                  {index + 1}
                 </span>
                 <div class="steps-info">
                   <h5 class="title-often">{item.title}</h5>
@@ -107,65 +107,69 @@ export default function (data, children) {
         }
       </div>
 
-      <div class="diploma-color">
-        <div class="title-block">
-          <span class="step">1</span>
-          <h5 class="title-often">цвет</h5>
-        </div>
-        <div class="radio-wrap">
-          <div class="radio-red">
-            <input id="checkboxRed" type="radio" name="coverBlue"></input>
-            <label for="checkboxRed"></label>
-          </div>
-          <div class="radio-blue">
-            <input id="checkboxBlue" type="radio" name="coverBlue"></input>
-            <label for="checkboxBlue"></label>
-          </div>
-        </div>
-      </div>
-
-      <div class="diploma-cover pt_40">
-        <div class="title-block">
-          <span class="step">2</span>
-          <h5 class="title-often">Обложка</h5>
-        </div>
-        <div class="covers">
-          {covers.map((item, index)=>{
-            return(
-              <div class="covers-item">
-                <div class="covers-item_img">
-                  <img src={item.img} alt="Обложка диплома"></img>
-                </div>
-                <p class="covers-item_title">{item.title}</p>
-                <span class="covers-item_price">{item.price}</span>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-
-      <div class="diploma-emblem">
+      <section class="order_content">
+        <div class="diploma-color">
           <div class="title-block">
+            <span class="step">1</span>
+            <h5 class="title-often">цвет</h5>
+          </div>
+          <div class="radio-wrap">
+            <div class="radio-red">
+              <input id="checkboxRed" type="radio" name="coverBlue"></input>
+              <label for="checkboxRed"></label>
+            </div>
+            <div class="radio-blue">
+              <input id="checkboxBlue" type="radio" name="coverBlue"></input>
+              <label for="checkboxBlue"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="diploma-cover">
+          <div class="title-block pb_15">
+            <span class="step">2</span>
+            <h5 class="title-often">Обложка</h5>
+          </div>
+          <div class="covers">
+            {covers.map((item, index) => {
+              return (
+                <div class="covers-item">
+                  <div class="covers-item_img">
+                    <img src={item.img} alt="Обложка диплома"></img>
+                  </div>
+                  <p class="covers-item_title">{item.title}</p>
+                  <span class="covers-item_price">{item.price}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <div class="diploma-emblem">
+          <div class="title-block pb_15">
             <span class="step">2</span>
             <h5 class="title-often">добавь фирменную эмблему вуза</h5>
           </div>
           <div class="emblems">
             {
-              emblems.map((item, index)=>{
-                return(
+              emblems.map((item, index) => {
+                return (
                   <div class="emblem-item">
                     <div class="emblem-item_img">
                       <img src={item.img} alt="Эмблема диплома" />
                     </div>
                     <h5 class="emblem-item_title">{item.title}</h5>
-                    <span class="emblem-item_price">{item.price}</span>
+                    <span class="emblem-item_price text-primary">{item.price}</span>
                   </div>
                 )
               })
             }
           </div>
-      </div>
+        </div>
+      </section>
 
-    </section>
+
+
+    </div>
   )
 }
