@@ -1,9 +1,10 @@
 import { Cemjsx } from "cemjs-all"
-// import About from "./pages/about"
-// import Contacts from "./pages/contacts"
 import Home from "./pages/home"
-// import Examples from "./pages/examples"
 import Order from "./pages/order"
+import Download from "./pages/download";
+import Finish from "./pages/finish";
+import Thanks from "./pages/thanks";
+import Documentation from "./pages/documentation";
 
 
 export default function () {
@@ -16,17 +17,21 @@ export default function () {
       return <Order />
       break;
 
-    // case "cemjs":
-    //   return <About />
-    //   break;
+    case "download":
+      return <Download />
+      break;
 
-    // case "home":
-    //   return <Home />
-    //   break;
+    case "finish":
+      return <Finish />
+      break;
 
-    // case "examples":
-    //   return <Examples />
-    //   break;
+    case "thanks":
+      return <Thanks />
+      break;
+
+    case "documentation":
+      return <Documentation />
+      break;
 
     default:
       break;

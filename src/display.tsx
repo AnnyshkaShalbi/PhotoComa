@@ -15,14 +15,21 @@ export const display = function () {
         <div class="general">
             <header class="header">
                 <div class="container">
-                <div class="inner-header">
+                <div class="header-inner">
                     <a href="/" class="logo">
                         <img src={logo} alt="PhotoComa"/>
                     </a>
-                    <div class="menu_icon">
+                    <div 
+                        class="menu_icon"
+                        ref="burger"
+                        onclick={()=>{
+                            this.Ref.menu.classList.toggle('active')
+                            this.Ref.burger.classList.toggle('active')
+                        }}
+                    >
                         <span></span>
                     </div>
-                    <div class="header_menu menu">
+                    <div class="header-menu" ref="menu">
                         <a class="phone" href="tel:+7 (915) 431-06-66">+7 (915) 431-06-66</a>
                         <nav>
                             <ul class="menu-list">
@@ -57,9 +64,9 @@ export const display = function () {
 
                 </div>
                 </div>
-                <div class="sublist">
+                <div class="header-sublist">
                 <div class="container">
-                    <ul class="menu-sublist">
+                    <ul class="sublist">
                         <li class="menu-list_item">
                             <a href="#">
                             Проектная документация
