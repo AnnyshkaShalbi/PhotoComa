@@ -1,6 +1,5 @@
 import { Cemjsx } from "cemjs-all"
 import arrowR from '@svg/arrow_right.svg'
-import filePdf from '@svg/filePdf.svg'
 
 const steps = [
   {
@@ -13,11 +12,11 @@ const steps = [
     title: 'загрузи файл',
     desc: 'Дипломная работа_2023.pdf',
     active: false,
-    done: false,
+    done: true,
   },
   {
     title: 'оформи заказ',
-    desc: 'В несколько кликов',
+    desc: 'В несколько кликов.',
     active: true,
     done: false
   },
@@ -47,8 +46,44 @@ export default function (data, children) {
         }
       </div>
 
-      <section class="finish"></section>
-
+      <section class="finish">
+        <div class="finish-item">
+          <form class="form">
+            <div class="g-col2">
+              <div class="form-field">
+                <label for="phone">Номер телефон</label>
+                <input id="phone" type="tel" class="form-input" placeholder="+7 (980) 324 - 12 - 32" />
+              </div>
+              <div class="form-field">
+                <label for="phone">Имя</label>
+                <input id="phone" type="text" class="form-input" placeholder="Андрей" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="phone">Электронная почта</label>
+              <input id="phone" type="email" class="form-input" placeholder="examplecloud@gmail.com" />
+            </div>
+            <div class="form-field">
+              <label for="phone">Комментарий</label>
+              <textarea class="form-comment">Завернуть диплом в пленку или добавить пакет</textarea>
+            </div>
+            <div class="g-col2">
+              <button class="btn">
+                Оформить заказ
+                <img src={arrowR} alt="Заказать" />
+              </button>
+              <p>
+                Нажимая кнопку «Оформить заказ», 
+                ты даёшь своё согласие на обработку <a href="/" class="link">персональных данных</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="finish-item">
+          <p class="finish-text">после оформления заказа ты можешь оплатить его онлайн и забрать свой диплом 
+            без надоедливой очереди</p>
+        </div>
+      </section>
 
     </div>
   )

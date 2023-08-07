@@ -123,9 +123,9 @@
 }
 
 // step 2
-.download-content{
+.download{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 30px;
 }
 
@@ -185,6 +185,16 @@
   }
 }
 
+.additionally{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &-item{
+    display: flex;
+  }
+}
+
 
 // thanks
 .thanks{
@@ -233,7 +243,7 @@
 }
 
 // documentation
-.documentation{
+.finish{
   display: grid;
   grid-template-columns: 2fr 1fr;
 

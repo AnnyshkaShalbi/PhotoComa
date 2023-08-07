@@ -47,8 +47,64 @@ export default function (data, children) {
         }
       </div>
 
-      <section class="finish">
-
+      <section class="download">
+        <div class="download_item file-wrap">
+          <div class="file-wrap_content">
+            <img class="file-wrap_img" src={filePdf} alt="Загрузка файла"></img>
+            <p class="text">Загрузите файл в формате PDF Макс. размером 100 мб</p>
+            <a href="/" class="btn">
+              Загрузить файл
+              <img src={arrowR} />
+            </a>
+          </div>
+        </div>
+        <div class="download_item file-options">
+          <div class="file-options_item">
+            <h5 class="file-options_title">печать</h5>
+            <div class="file-options_choose">
+              <div class="file-options_choose-item">
+                <div class="radio-blue">
+                  <input id="printBlack" type="radio" name="printType"></input>
+                  <label for="printBlack"></label>
+                </div>
+                <span>Черно-белая</span>
+              </div>
+              <div class="file-options_choose-item">
+                <div class="radio-blue">
+                  <input id="printColor" type="radio" name="printType"></input>
+                  <label for="printColor"></label>
+                </div>
+                <span>Цветная</span>
+              </div>
+            </div>
+          </div>
+          <div class="file-options_item">
+            <h5 class="file-options_title">дополнительно</h5>
+            <div class="additionally">
+              <div class="additionally-item">
+                <div class="additionally-item_check">
+                  <input type="checkbox" id="cb1" name="cb1" checked />
+                  <label for="cb1">Вклеить карман для рецензии</label>
+                </div>
+                <span>50 ₽</span>
+              </div>
+              <div class="additionally-item">
+                <div class="additionally-item_check">
+                  <input type="checkbox" id="cb2" name="cb2" />
+                  <label for="cb2">Вклеить карман для CD диска</label>
+                </div>
+                <span>50 ₽</span>
+              </div>
+              <div class="additionally-item">
+                <div class="additionally-item_check">
+                  <input type="checkbox" id="cb3" name="cb3" />
+                  <label for="cb3">Добавить пластиковый файл</label>
+                </div>
+                <span>20 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </div>

@@ -46,8 +46,8 @@ export default function (data, children) {
         }
       </div>
 
-      <section class="documentation">
-        <div class="documentation-item">
+      <section class="finish">
+        <div class="finish-item">
           <form class="form">
             <div class="g-col2">
               <div class="form-field">
@@ -79,8 +79,8 @@ export default function (data, children) {
             </div>
           </form>
         </div>
-        <div class="documentation-item">
-          <p class="documentation-text">после оформления заказа ты можешь оплатить его онлайн и забрать свой диплом 
+        <div class="finish-item">
+          <p class="finish-text">после оформления заказа ты можешь оплатить его онлайн и забрать свой диплом 
             без надоедливой очереди</p>
         </div>
       </section>
