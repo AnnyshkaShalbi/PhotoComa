@@ -1,88 +1,77 @@
 import { Cemjsx } from "cemjs-all"
 import arrowR from '@svg/arrow_right.svg'
 
-const steps = [
-  {
-    title: 'выберите обложку',
-    desc: 'Синяя. С тиснением ВКР. С эмблемой МАДИ — 480 ₽',
-    active: false,
-    done: true,
-  },
-  {
-    title: 'загрузи файл',
-    desc: 'Дипломная работа_2023.pdf',
-    active: false,
-    done: true,
-  },
-  {
-    title: 'оформи заказ',
-    desc: 'В несколько кликов.',
-    active: true,
-    done: false
-  },
-]
+
 
 
 export default function (data, children) {
   return (
     <div class="order">
-      <h2 class="title-secondary">твёрдый переплёт дипломов</h2>
-      <div class="steps">
-        {
-          steps.map((item, index) => {
-            return (
-              <div class="steps-item">
-                <span class={["step", 
-                  item.active ? "step-active" : item.done ? "step-done" : null]}>
-                  {index + 1}
-                </span>
-                <div class="steps-info">
-                  <h5 class="title-often">{item.title}</h5>
-                  <p class="steps-info_desc">{item.desc}</p>
-                </div>
-              </div>
-            )
-          })
-        }
-      </div>
+      <h2 class="title-secondary">копирование документов</h2>
+      <p class="desc">Любые документы могут быть откопированы в высоком качестве прямо у вас на глазах как в ч/б-варианте, так и в цвете</p>
 
-      <section class="finish">
-        <div class="finish-item">
-          <form class="form">
-            <div class="g-col2">
-              <div class="form-field">
-                <label for="phone">Номер телефон</label>
-                <input id="phone" type="tel" class="form-input" placeholder="+7 (980) 324 - 12 - 32" />
-              </div>
-              <div class="form-field">
-                <label for="phone">Имя</label>
-                <input id="phone" type="text" class="form-input" placeholder="Андрей" />
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="phone">Электронная почта</label>
-              <input id="phone" type="email" class="form-input" placeholder="examplecloud@gmail.com" />
-            </div>
-            <div class="form-field">
-              <label for="phone">Комментарий</label>
-              <textarea class="form-comment">Завернуть диплом в пленку или добавить пакет</textarea>
-            </div>
-            <div class="g-col2">
-              <button class="btn">
-                Оформить заказ
-                <img src={arrowR} alt="Заказать" />
-              </button>
-              <p>
-                Нажимая кнопку «Оформить заказ», 
-                ты даёшь своё согласие на обработку <a href="/" class="link">персональных данных</a>
-              </p>
-            </div>
-          </form>
-        </div>
-        <div class="finish-item">
-          <p class="finish-text">после оформления заказа ты можешь оплатить его онлайн и забрать свой диплом 
-            без надоедливой очереди</p>
-        </div>
+      <section class="doc">
+        <table 
+          class="doc-table" 
+          
+        >
+          <thead class="doc-table_header">
+            <tr class="doc-table_row">
+              <th>прайс-лист</th>
+            </tr>
+          </thead>
+          <tbody class="doc-table_body">
+            <tr class="doc-table_row">
+              <td>Черно-белое копирование</td>
+              <td  >A4</td>
+              <td  >A3</td>
+              <td  >A2</td>
+              <td  >A1</td>
+              <td  >A0</td>
+            </tr>
+            <tr class="doc-table_row">
+              <td>1-100 страниц</td>
+              <td  >10 ₽</td>
+              <td  >22 ₽</td>
+              <td  >60 ₽</td>
+              <td  >80 ₽</td>
+              <td  >130 ₽</td>
+            </tr>
+            <tr class="doc-table_row">
+              <td >101-300 страниц</td>
+              <td  >8 ₽</td>
+              <td  >18 ₽</td>
+              {/* <td></td>
+              <td></td>
+              <td></td> */}
+            </tr>
+            <tr class="doc-table_row">
+              <td>Цветное копирование</td>
+              <td  >A4</td>
+              <td  >A3</td>
+              <td  >A2</td>
+              <td  >A1</td>
+              <td  >A0</td>
+            </tr>
+            <tr class="doc-table_row">
+              <td>{`1-100 страниц ${this.Static.fifteen}`}</td>
+              <td  >30 ₽</td>
+              <td  >55 ₽</td>
+              <td  >85 ₽</td>
+              <td  >110 ₽</td>
+              <td  >160 ₽</td>
+            </tr>
+            <tr class="doc-table_row">
+              <td>{`${this.Static.fifteen}`}</td>
+              <td  >36 ₽</td>
+              <td  >60 ₽</td>
+              <td  >150 ₽</td>
+              <td  >190 ₽</td>
+              <td  >280 ₽</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="doc-request"></div>
       </section>
 
     </div>

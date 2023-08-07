@@ -13,7 +13,7 @@ export default function (data, children) {
         <p class="thanks-desc">В течение 5 минут менеджер свяжется с тобой по номеру для подтверждения заказа</p>
         <span class="text-bold">+7 (989) 123-56-09</span>
         <a 
-          href="/"
+          href=""
           class="text-primary link"
           onclick={()=>{
             this.Static.page = "home";

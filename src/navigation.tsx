@@ -4,7 +4,7 @@ import Order from "./pages/order"
 import Download from "./pages/download";
 import Finish from "./pages/finish";
 import Thanks from "./pages/thanks";
-import Documentation from "./pages/finish";
+import Documentation from "./pages/documentation";
 
 
 export default function () {

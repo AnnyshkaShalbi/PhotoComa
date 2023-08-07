@@ -68,7 +68,13 @@ export default function (data, children) {
               <textarea class="form-comment">Завернуть диплом в пленку или добавить пакет</textarea>
             </div>
             <div class="g-col2">
-              <button class="btn">
+              <button 
+                class="btn"
+                onclick={()=>{
+                  this.Static.page = "thanks";
+                  this.init();
+                }}
+              >
                 Оформить заказ
                 <img src={arrowR} alt="Заказать" />
               </button>
