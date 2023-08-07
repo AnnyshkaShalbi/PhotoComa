@@ -44,7 +44,7 @@ export default function (data, children) {
     <div class="home">
       <section class="printOrder">
         <div class="main-img">
-          <img src={mainImg} alt="Photo Coma"/>
+          <img src={mainImg} alt="Photo Coma" />
         </div>
         <div class="printOrder-desc">
           <h1 class="title">
@@ -62,10 +62,10 @@ export default function (data, children) {
       </section>
       <section class="category">
         {
-          category.map((item, index)=>{
-            return(
+          category.map((item, index) => {
+            return (
               <div class="category-item">
-                <img src={item.src} alt="Print"/>
+                <img src={item.src} alt="Print" />
               </div>
             )
           })
@@ -136,7 +136,7 @@ export default function (data, children) {
           +7 (915) 431-06-66
           <img src={whatsup} alt="Whats'up" />
         </a>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.31870343532!2d37.67732269563418!3d55.770336469818844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a83a74c32cd%3A0xf2d17908ec580712!2z0JHQsNGD0LzQsNC90YHQutCw0Y8g0YPQuy4sINCc0L7RgdC60LLQsA!5e0!3m2!1sru!2sru!4v1682270208175!5m2!1sru!2sru" width="var(--height)" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.31870343532!2d37.67732269563418!3d55.770336469818844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a83a74c32cd%3A0xf2d17908ec580712!2z0JHQsNGD0LzQsNC90YHQutCw0Y8g0YPQuy4sINCc0L7RgdC60LLQsA!5e0!3m2!1sru!2sru!4v1682270208175!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="location-address">
           <div class="adress-block">
             <div class="category-item blue-border_up"></div>

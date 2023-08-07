@@ -1,41 +1,48 @@
 // section print order
-.main{
+.main {
     padding-top: 160px;
-  }
-  .printOrder{
+}
+
+.printOrder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 133px;
     position: relative;
     margin-top: 85px;
-  }
-  .main-img{
+}
+
+.main-img {
     // background: var(--grey);
     width: 592px;
     height: 670px;
-  }
-  .printOrder-desc{
+}
+
+.printOrder-desc {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    .title{
-      position: absolute;
-      top: 50px;
-      right: 0;
+
+    .title {
+        position: absolute;
+        top: 50px;
+        right: 0;
     }
 }
+
 // section category
-.category{
+.category {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
-    .category-item{
-        width: 282px;
-        height: 282px;
-        background: var(--grey);
-        position: relative;
-    &.blue-border_up::before{
+
+.category-item {
+    width: 282px;
+    height: 282px;
+    background: var(--grey);
+    position: relative;
+
+    &.blue-border_up::before {
         content: "";
         width: 282px;
         height: 282px;
@@ -45,46 +52,74 @@
         border: 2px solid var(--primary);
         background: transparent;
     }
-    }
-    
-    // section emblem
-    .emblem{
+}
+
+// section emblem
+.emblem {
     // background: var(--grey);
-        background: url('images/copycom.jpg') no-repeat;
-        background-size: center center;
-        height: 360px;
-        position: relative;
-        padding: 40px;
-    .title{
+    background: url('images/copycom.jpg') no-repeat;
+    background-size: center center;
+    height: 360px;
+    position: relative;
+    padding: 40px;
+
+    .title {
         position: absolute;
         left: 40px;
         top: -90px;
     }
+}
+
+.order-emblem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    // width: var(--height);
+    width: 93%;
+    bottom: 40px;
+}
+
+.brand-name {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+// section about
+.about-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.about-item {
+    transform: translateX(250px);
+    opacity: 0;
+    transition: all 1s ease;
+
+    &.show {
+        transform: translateX(0);
+        opacity: 1;
     }
-    .order-emblem{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        position: absolute;
-        // width: var(--height);
-        width: 93%;
-        bottom: 40px;
-    }
-    .brand-name{
-        font-weight: 400;
-        font-size: 25px;
-        line-height: 40px;
-        text-transform: uppercase;
-    }
-    // section about
-    .about-items{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px;
-    }
+}
+
+.about-item:first-child {
+    transition: all 0.8s ease;
+}
+
+.about-item:nth-child(2) {
+    transition: all 1.5s ease;
+}
+
+.about-item:nth-child(3) {
+    transition: all 2s ease;
+}
+
 // section location
-.location{
-    &-subtitle{
+.location {
+    &-subtitle {
         padding: 50px 0;
         font-weight: 400;
         font-size: 30px;
@@ -93,30 +128,36 @@
         justify-content: center;
         align-items: center;
         color: var(--text-primary);
-        img{
-        margin-left: 30px;
+
+        img {
+            margin-left: 30px;
         }
     }
-    &-address{
+
+    &-address {
         padding-top: 50px;
-        .adress-block{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 30px;
-        padding-bottom: 30px;
+
+        .adress-block {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+            padding-bottom: 30px;
         }
     }
-    }
-    .contacts{
+}
+
+.contacts {
     display: flex;
     flex-direction: column;
     grid-gap: 10px;
-    &-right{
+
+    &-right {
         text-align: right;
         background: transparent;
         justify-content: center;
     }
-    &-left{
+
+    &-left {
         text-align: left;
         background: transparent;
     }

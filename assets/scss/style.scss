@@ -36,32 +36,39 @@ dl,
 dd {
   margin: 0;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   font-family: 'Tenor Sans';
   text-transform: uppercase;
 }
-html, #app{
+
+html,
+#app {
   height: var(--height);
 }
+
 body {
   height: var(--height);
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: var(--text-primary);
+  overflow-x: hidden;
 }
-.general{
+
+.general {
   min-height: var(--height);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-body._lock{
+
+body._lock {
   overflow: hidden;
 }
 
@@ -73,11 +80,12 @@ ol {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -88,15 +96,17 @@ select {
   font: inherit;
 }
 
-[type=checkbox], [type=radio] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.container{
+.container {
   max-width: 1218px;
   margin: 0 auto;
 }
-section{
+
+section {
   margin-bottom: 150px;
 }

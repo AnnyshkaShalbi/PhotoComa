@@ -25,5 +25,6 @@ declare namespace global {
 declare interface Micro {
     name: String,
     loader: Function,
-    display: Function
+    display: Function,
+    listener: any
 }
