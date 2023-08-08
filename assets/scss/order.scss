@@ -58,9 +58,11 @@
   }
 }
 
-.diploma-color {
-  display: flex;
-  gap: 60px;
+.diploma {
+  &-color {
+    display: flex;
+    gap: 60px;
+  }
 }
 
 .title-block {
@@ -79,6 +81,8 @@
   gap: 30px;
 
   &-item {
+    transition: 0.5s;
+
     &_img {
       width: 220px;
       height: 220px;
@@ -86,17 +90,26 @@
       justify-content: center;
       align-items: center;
       background: var(--grey);
+      cursor: pointer;
 
       img {
         width: 130px;
         height: auto;
       }
 
+      &:hover {
+        border: 2px solid var(--primary);
+      }
+
+      &.active {
+        border: 2px solid var(--primary);
+      }
+
     }
   }
 }
 
-// emblems
+// diploma emblems
 .emblems {
   display: flex;
   gap: 30px;
@@ -110,26 +123,37 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
-        // img{
-        //   height: 50px;
-        //   width: 100%;
-        // }
+        &:hover {
+          border: 2px solid var(--primary);
+        }
+
+        &.active {
+          border: 2px solid var(--primary);
+        }
       }
     }
   }
+}
 
-
+// diploma choose
+.diploma {
+  &-choose {
+    background: var(--grey);
+    padding: 20px 45px;
+    width: 50%;
+  }
 }
 
 // step 2
-.download{
+.download {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 30px;
 }
 
-.file-wrap{
+.file-wrap {
   border: 1px dashed var(--grey-ligth);
   padding: 30px;
   display: flex;
@@ -137,47 +161,47 @@
   align-items: center;
   gap: 30px;
 
-  &_img{
+  &_img {
     height: 100px;
   }
 
-  &_content{
+  &_content {
     max-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
 
-    .text{
+    .text {
       color: var(--text-secondary);
       text-align: center;
     }
   }
 }
 
-.file-options{
+.file-options {
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  &_title{
+  &_title {
     font-size: 16px;
     line-height: 25px;
     font-weight: 500;
     padding-bottom: 20px;
   }
 
-  &_item{
+  &_item {
     border: 1px solid var(--grey-ligth);
     padding: 15px 20px;
   }
 
-  &_choose{
+  &_choose {
     display: flex;
     flex-direction: column;
     gap: 15px;
 
-    &-item{
+    &-item {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -186,17 +210,17 @@
 }
 
 
-.additionally{
+.additionally {
   display: flex;
   flex-direction: column;
   gap: 15px;
 
-  &-item{
+  &-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &_check{
+    &_check {
       position: relative;
 
       input {
@@ -212,24 +236,24 @@
         left: 0;
         margin: 0;
         outline: none;
-      
+
         &:checked {
           background-color: var(--primary);
           border-color: var(--primary);
-      
-          & + label {
+
+          &+label {
             font-size: 16px;
             line-height: 24px;
             font-weight: 400;
           }
-      
+
           &:focus,
           &:hover {
             // box-shadow: 0 0 0 3px hsl(0, 0%, 85%);
             border-color: hsl(236, 100%, 85%);
           }
         }
-      
+
         &:after {
           content: "";
           width: 100%;
@@ -242,14 +266,14 @@
           background-repeat: no-repeat;
           background-position: center;
         }
-      
+
         &:focus,
         &:hover {
           box-shadow: 0 0 0 3px hsl(0, 0%, 92%);
           border-color: hsl(236, 100%, 85%);
         }
       }
-      
+
       label {
         padding: 0px 0px 0px 30px;
         display: inline-block;
@@ -258,31 +282,87 @@
         cursor: pointer;
       }
     }
-  } 
+  }
+}
+
+.done {
+  background: var(--primary-ligth);
+  position: relative;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    z-index: 1;
+  }
+
+  .btn {
+    z-index: 1;
+  }
+
+  &-list {
+    max-width: 360px;
+
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &-then {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &_price {
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 70px;
+      text-transform: uppercase;
+      text-align: right;
+      color: var(--text-dark);
+      font-family: 'Tenor Sans';
+
+      span {
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 
 // thanks
-.thanks{
+.thanks {
   padding-top: 60px;
   font-size: 18px;
   line-height: 35px;
   font-weight: 400;
   font-family: 'Inter';
 
-  &-title{
+  &-title {
     font-size: 30px;
     line-height: 40px;
     font-weight: 500;
     color: var(--primary);
   }
 
-  &-desc{
+  &-desc {
     color: var(--text-secondary);
     text-align: center;
   }
 
-  &-wrap{
+  &-wrap {
     max-width: 610px;
     margin: 0 auto;
     display: flex;
@@ -290,11 +370,11 @@
     justify-content: center;
     gap: 15px;
     align-items: center;
-    background: #F0F6FB;
+    background: var(--primary-ligth);
     padding: 50px 75px;
     position: relative;
 
-    &::before{
+    &::before {
       content: "";
       width: 100%;
       height: 100%;
@@ -309,15 +389,15 @@
 }
 
 //  finish
-.finish{
+.finish {
   display: grid;
   grid-template-columns: 2fr 1fr;
 
-  &-item:first-child{
+  &-item:first-child {
     border-right: 2px solid var(--primary);
   }
 
-  &-text{
+  &-text {
     font-size: 19px;
     line-height: 30px;
     font-weight: 400;
@@ -327,24 +407,24 @@
   }
 }
 
-.form{
+.form {
   padding-right: 100px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  &-field{
+  &-field {
     display: flex;
     flex-direction: column;
   }
 
-  &-input{
+  &-input {
     border: 1px solid var(--text-secondary);
     padding: 15px 20px;
     color: var(--black);
   }
 
-  &-comment{
+  &-comment {
     resize: none;
     height: 150px;
     padding: 15px 20px;
@@ -352,20 +432,21 @@
 }
 
 // documentation
-.documentation{
+.documentation {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
 }
-.doc{
-  &-table{
+
+.doc {
+  &-table {
     border-collapse: collapse;
     // border-color: ;
 
-    &_header{
+    &_header {
       position: relative;
 
-      &::before{
+      &::before {
         height: 100%;
         width: 100%;
         content: '';
@@ -378,21 +459,23 @@
         z-index: 1;
       }
     }
-   
-    &_row{
-      th, td{
+
+    &_row {
+
+      th,
+      td {
         padding: 15px 20px;
       }
     }
 
-    &_body{
+    &_body {
 
-      tr:not(:last-child){
+      tr:not(:last-child) {
         border-bottom: 2px solid var(--border-table);
       }
 
-      tr{
-        td:not(:last-child){
+      tr {
+        td:not(:last-child) {
           border-right: 2px solid var(--border-table);
         }
       }

@@ -33,7 +33,7 @@ export default function (data, children) {
           steps.map((item, index) => {
             return (
               <div class="steps-item">
-                <span class={["step", 
+                <span class={["step",
                   item.active ? "step-active" : item.done ? "step-done" : null]}>
                   {index + 1}
                 </span>
@@ -52,10 +52,16 @@ export default function (data, children) {
           <div class="file-wrap_content">
             <img class="file-wrap_img" src={filePdf} alt="Загрузка файла"></img>
             <p class="text">Загрузите файл в формате PDF Макс. размером 100 мб</p>
-            <a href="/" class="btn">
+            <button
+              class="btn"
+              onclick={() => {
+                this.Static.page = "finish"
+                this.init()
+              }}
+            >
               Загрузить файл
               <img src={arrowR} />
-            </a>
+            </button>
           </div>
         </div>
         <div class="download_item file-options">
@@ -104,6 +110,47 @@ export default function (data, children) {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="done">
+        <div class="done-item">
+          <h5>Готовность</h5>
+          <ul class="done-list">
+            <li class="done-list_item">
+              <p>Обложка</p>
+              <span>50 руб</span>
+            </li>
+            <li class="done-list_item">
+              <p>Страницы 109 х 10 ₽</p>
+              <span>1090 руб</span>
+            </li>
+            <li class="done-list_item">
+              <p>Карман для рецензии</p>
+              <span>50 руб</span>
+            </li>
+            <li class="done-list_item">
+              <p>Карман для CD диска</p>
+              <span>80 руб</span>
+            </li>
+            <li class="done-list_item">
+              <p>Файл перед титулом 4 х 20 ₽</p>
+              <span>80 руб</span>
+            </li>
+          </ul>
+        </div>
+        <div class="done-item done-then">
+          <p class="done-then_price">1200 <span>руб</span></p>
+          <button
+            class="btn"
+            onclick={() => {
+              this.Static.page = "finish";
+              this.init();
+            }}
+          >
+            Оформить заказ
+            <img src={arrowR} />
+          </button>
         </div>
       </section>
 

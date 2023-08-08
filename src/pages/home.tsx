@@ -54,10 +54,16 @@ export default function (data, children) {
           </h1>
           <p class="desc">Описание Описание Описание Описание Описание Описание
             Описание Описание Описание Описание Описание</p>
-          <a href="#" class="btn">
+          <button
+            class="btn"
+            onclick={() => {
+              this.Static.page = "order";
+              this.init();
+            }}
+          >
             Заказать печать
             <img src={arrowR} alt="Заказать" />
-          </a>
+          </button>
         </div>
       </section>
       <section class="category">
@@ -104,10 +110,16 @@ export default function (data, children) {
         </h2>
         <div class="order-emblem">
           <span class="brand-name">с фирменной эмблемой твоего вуза</span>
-          <a href="#" class="btn">
+          <button
+            class="btn"
+            onclick={() => {
+              this.Static.page = "order";
+              this.init();
+            }}
+          >
             Заказать печать
             <img src={arrowR} alt="Заказать печать" />
-          </a>
+          </button>
         </div>
       </section>
       <section class="about">
