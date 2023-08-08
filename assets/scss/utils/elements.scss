@@ -171,6 +171,14 @@ $indent in $indents {
   &:hover{
     background: var(--primary-dark);
   }
+
+  &-passive{
+    background: var(--btn-passive);
+
+    &:hover{
+      background: var(--btn-passive);
+    }
+  }
 }
 
 // checkbox

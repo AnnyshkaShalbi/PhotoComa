@@ -439,9 +439,21 @@
 }
 
 .doc {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+
+  &-title{
+    font-family: 'Tenor Sans';
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
   &-table {
     border-collapse: collapse;
-    // border-color: ;
 
     &_header {
       position: relative;
@@ -465,6 +477,7 @@
       th,
       td {
         padding: 15px 20px;
+        height: 50px;
       }
     }
 
@@ -479,6 +492,26 @@
           border-right: 2px solid var(--border-table);
         }
       }
+    }
+  }
+
+  &-request{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .doc-title{
+      padding-top: 20px;
+    }
+
+    &_text{
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 400;
+    }
+
+    .btn{
+      width: 100%;
     }
   }
 }

@@ -1,6 +1,6 @@
 export const loader = function () {
     this.Static.fifteen = "(< 50%)";
-    this.Static.page = "home";
+    this.Static.page = "documentation";
     this.Static.copySuccess = false;
 
     // diploma 
