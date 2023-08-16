@@ -47,10 +47,10 @@ export default function (data, children) {
           <img src={mainImg} alt="Photo Coma" />
         </div>
         <div class="printOrder-desc">
-          <h1 class="title">
-            печать д<span class="circle-text"></span>кументов,
-            проектной документации,
-            твёрдый переплёт дипл<span class="circle-text"></span>мов
+          <h1 class="title title-main">
+            <span>печать д<span class="circle-text"></span>кументов,</span>
+            <span>проектной документации,</span>
+            <span>твёрдый переплёт дипл<span class="circle-text"></span>мов</span>
           </h1>
           <p class="desc">Описание Описание Описание Описание Описание Описание
             Описание Описание Описание Описание Описание</p>

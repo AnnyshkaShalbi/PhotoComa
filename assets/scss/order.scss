@@ -515,3 +515,42 @@
     }
   }
 }
+
+@media (max-width: 1070px){
+  .thanks{
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 670px){
+  .thanks{
+    padding-top: 0;
+
+    &-wrap{
+      max-width: 100%;
+      width: 100%;
+      padding: 50px;
+      line-height: 26px;
+
+      &::before{
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .thanks{
+    font-size: 14px;
+
+    &-title{
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &-wrap{
+      gap: 10px;
+      padding: 25px;
+    }
+  }
+}

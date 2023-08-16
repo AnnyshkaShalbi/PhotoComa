@@ -126,24 +126,26 @@ $indent in $indents {
   font-weight: 400;
   font-size: 46px;
   line-height: 60px;
-}
 
-.title-general {
-  text-align: center;
-}
-
-.title-secondary {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 40px;
-}
-
-.title-often {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  &-general{
+    text-align: center;
+  }
+  &-secondary{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+  &-often{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &-main{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .desc {
@@ -244,9 +246,71 @@ $indent in $indents {
   }
 }
 
+.dropdown{
+  position: relative;
 
+  &-toggle{
 
+  }
+  &-menu{
+    position: absolute;
+    top: 100%;  
+    left: 0;
+    margin-top: 10px;
+    background: var(--white);
+    border: 1px solid var(--grey-ligth);
+    box-shadow: 4px 7px 15px 0px rgba(56, 65, 90, 0.30);
+    width: 350px;
+    height: 230px;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: all .05s ease-out;
 
+    &_item{
+      padding: 10px 15px;
+      cursor: pointer;
+
+      &:hover{
+        background: rgba(241, 244, 247, 0.60);
+        
+        a{
+          color: var(--primary);
+        }
+      }
+    }
+
+    &_item:not(:last-child){
+      border-bottom: 2px solid rgba(241, 244, 247, 0.60);
+    }
+
+    &.show{
+      opacity: 1;
+      visibility: visible;
+      z-index: 5;
+      margin-top: 15px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+  
+    &::-webkit-scrollbar-button {
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 0px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary);
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+}
 
 // grid
 .g-col2{

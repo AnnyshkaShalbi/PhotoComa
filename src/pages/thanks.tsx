@@ -1,8 +1,4 @@
 import { Cemjsx } from "cemjs-all"
-import arrowR from '@svg/arrow_right.svg'
-import filePdf from '@svg/filePdf.svg'
-
-
 
 
 export default function (data, children) {
