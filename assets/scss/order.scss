@@ -554,3 +554,16 @@
     }
   }
 }
+
+@media (max-width: 380px){
+  .thanks{
+    &-title{
+      font-size: 18px;
+      line-height: 26px;
+    }
+    &-desc{
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

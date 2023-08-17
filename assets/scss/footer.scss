@@ -136,3 +136,20 @@
     }
   }
 }
+
+@media (max-width: 380px){
+  .footer{
+    &-item{
+      &_desc{
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    }
+
+    .number{
+      span{
+        font-size: 18px;
+      }
+    }
+  }
+}
