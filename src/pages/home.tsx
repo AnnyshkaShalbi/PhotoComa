@@ -52,8 +52,7 @@ export default function (data, children) {
             <span>проектной документации,</span>
             <span>твёрдый переплёт дипл<span class="circle-text"></span>мов</span>
           </h1>
-          <p class="desc">Описание Описание Описание Описание Описание Описание
-            Описание Описание Описание Описание Описание</p>
+          <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vel consequatur at exercitationem eos rem commodi in cum sequi asperiores?</p>
           <button
             class="btn"
             onclick={() => {
@@ -76,37 +75,11 @@ export default function (data, children) {
             )
           })
         }
-
-
-        {/* <div class="category-item blue-border_up">
-          <img src='@images/category/category7.jpg' alt="Print"/>
-        </div>
-        <div class="category-item">
-          <img src="@images/category/category7.jpg" alt="Print"/>
-        </div>
-        <div class="category-item">
-          <img src="@images/category/category6.jpg" alt="Print"/>
-        </div>
-        <div class="category-item blue-border_up">
-          <img src="@images/category/category5.jpg" alt="Print"/>
-        </div>
-        <div class="category-item">
-          <img src="@images/category/category4.jpg" alt="Print"/>
-        </div>
-        <div class="category-item blue-border_down">
-          <img src="@images/category/category3.jpg" alt="Print"/>
-        </div>
-        <div class="category-item">
-          <img src="@images/category/category2.jpg" alt="Print"/>
-        </div>
-        <div class="category-item blue-border_down">
-          <img src="@images/category/category1.jpg" alt="Print"/>
-        </div> */}
       </section>
       <section class="emblem">
         <h2 class="title">
-          печать и твёрдый переплёт
-          дипл<span class="circle-text"></span>мов
+          <span>печать и твёрдый переплёт</span>
+          <span>дипл<span class="circle-text"></span>мов</span>
         </h2>
         <div class="order-emblem">
           <span class="brand-name">с фирменной эмблемой твоего вуза</span>
@@ -127,18 +100,15 @@ export default function (data, children) {
         <div class="about-items">
           <div class="about-item">
             <h6 class="title">25 000+</h6>
-            <p class="desc">Описание Описание Описание Описание Описание Описание Описание
-              Описание Описание Описание Описание Описание</p>
+            <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio velit laboriosam, saepe assumenda sed numquam est corrupti beatae nulla dolores!</p>
           </div>
           <div class="about-item">
             <h6 class="title">25 000+</h6>
-            <p class="desc">Описание Описание Описание Описание Описание Описание Описание
-              Описание Описание Описание Описание Описание</p>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptate sapiente quaerat dicta maiores animi consectetur ipsa pariatur earum maxime.</p>
           </div>
           <div class="about-item">
             <h6 class="title">25 000+</h6>
-            <p class="desc">Описание Описание Описание Описание Описание Описание Описание
-              Описание Описание Описание Описание Описание</p>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ullam vero ex incidunt similique inventore! Minus non cum placeat quod?</p>
           </div>
         </div>
       </section>
