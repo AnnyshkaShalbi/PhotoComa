@@ -96,7 +96,6 @@ export default function (data, children) {
         </div>
       </section>
       <section class="about">
-        {/* <h2 class="title title-general"></h2>  */}
         <div class="about-items">
           <div class="about-item">
             <h6 class="title">25 000+</h6>
@@ -119,27 +118,25 @@ export default function (data, children) {
           <img src={whatsup} alt="Whats'up" />
         </a>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.31870343532!2d37.67732269563418!3d55.770336469818844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a83a74c32cd%3A0xf2d17908ec580712!2z0JHQsNGD0LzQsNC90YHQutCw0Y8g0YPQuy4sINCc0L7RgdC60LLQsA!5e0!3m2!1sru!2sru!4v1682270208175!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="location-address">
-          <div class="adress-block">
-            <div class="category-item adress-block_item blue-border_up_right"></div>
-            <div class="category-item adress-block_item"></div>
-            <div class="category-item contacts contacts-left">
-              <h6 class="phone">Метро Аэропорт</h6>
-              <span class="desc">Московское метро</span>
-              <span class="desc">Ежедневно с 9.00 до 18.00</span>
-            </div>
-          </div>
-          <div class="adress-block">
-            <div class="category-item contacts contacts-right">
-              <h6 class="phone">Бауманская</h6>
-              <span class="desc">ул. Бауманская, д. 190</span>
-              <span class="desc">Ежедневно с 9.00 до 18.00</span>
-            </div>
-            <div class="category-item adress-block_item"></div>
-            <div class="category-item adress-block_item mobile"></div>
-            <div class="category-item blue-border_up adress-block_item"></div>
-          </div>
+        
+      </section>
+      <section class="address">
+        <div class="address-item"></div>
+        <div class="address-item"></div>
+        <div class="address-item address-item_info">
+          <h6 class="address-item_title">Метро Аэропорт</h6>
+          <span class="address-item_desc">Московское метро</span>
+          <span class="address-item_desc">Ежедневно с 9.00 до 18.00</span>
         </div>
+        <div class="address-item address-item_empty"></div>
+        <div class="address-item address-item_info address-item_info_r">
+          <h6 class="address-item_title">Бауманская</h6>
+          <span class="address-item_desc">ул. Бауманская, д. 190</span>
+          <span class="address-item_desc">Ежедневно с 9.00 до 18.00</span>
+        </div>
+        <div class="address-item"></div>
+        <div class="address-item"></div>
+        <div class="address-item"></div>
       </section>
     </div>
   )

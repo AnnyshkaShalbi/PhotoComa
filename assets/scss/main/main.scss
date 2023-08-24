@@ -157,25 +157,68 @@
         }
     }
 
-    &-address {
-        padding-top: 50px;
+}
 
-        .adress-block {
-            height: 282px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 30px;
-            padding-bottom: 30px;
+.address{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    
+    &-item{
+        background: var(--grey);
+        height: 280px;
 
-            &_item{
-                background: var(--grey);
-                width: 100%;
+        &_empty{
+            background: transparent;
+        }
 
-                &::before{
-                    content: "";
-                    width: 100%;
-                }
+        &_info{
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &_r{
+                justify-content: center;
+                align-items: end;
             }
+        }
+
+        &_title{
+            font-size: 18px;
+            line-height: 30px;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        &_desc{
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+        }
+    }
+
+    &-item:first-child,
+    &-item:last-child{
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            border: 2px solid var(--primary);
+            top: 12px;
+            right: -12px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-item:last-child{
+        &::before{
+            top: -12px;
+            left: -12px;
         }
     }
 }
@@ -212,18 +255,16 @@
             }
         }
     }
-    .location{
-        &-address{
-            .adress-block{
-                grid-template-columns: repeat(3, 1fr);
-
-                .mobile{
-                    display: none;
-                }
+    .address{
+        grid-template-columns: repeat(3, 1fr);
+        &-item{
+            height: 300px;
+            &_empty{
+                display: none;
             }
         }
-        &-subtitle{
-            padding: 15px 0 30px 0;
+        &-item:nth-child(7){
+            display: none;
         }
     }
 }
@@ -255,6 +296,97 @@
             font-size: 40px;
             line-height: 50px;
             top: -75px;
+        }
+    }
+    .address{
+        &-item{
+            height: 250px;
+        }
+    }
+}
+
+@media (max-width: 840px){
+    .printOrder{
+        grid-template-columns: 1fr;
+
+        &-desc{
+            gap: 25px;
+
+            .title{
+                position: relative;
+                top: auto;
+                right: auto;
+                font-size: 32px;
+            }
+
+            .desc{
+                padding-bottom: 0;
+            }
+        }
+    }
+    .main-img{
+        order: 1;
+        width: 100%;
+        height: 400px;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .category{
+        gap: 20px;
+    }
+    .emblem{
+        padding: 20px;
+        .title{
+            font-size: 32px;
+            left: 20px;
+        }
+    }
+    .order-emblem{
+        flex-direction: column;
+        align-items: start;
+        bottom: 20px;
+        gap: 10px;
+    }
+    .about{
+        &-items{
+            grid-template-columns: 1fr;
+        }
+        &-item{
+            .desc{
+                font-size: 18px;
+            }
+        }
+    }
+    .address{
+        grid-template-columns: repeat(2, 1fr);
+        &-item{
+            height: 270px;
+
+            &_info{
+                height: fit-content;
+                padding: 20px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .category{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 620px){
+    .printOrder{
+        &-desc{
+            .title{
+                font-size: 24px;
+                line-height: 32px;
+            }
         }
     }
 }
