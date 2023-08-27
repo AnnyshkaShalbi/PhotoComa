@@ -32,7 +32,9 @@ export default function (data, children) {
         {
           steps.map((item, index) => {
             return (
-              <div class="steps-item">
+              <div 
+                class={["steps-item", item.active ? "steps-item_active" : null]}
+              >
                 <span class={["step",
                   item.active ? "step-active" : item.done ? "step-done" : null]}>
                   {index + 1}
@@ -47,16 +49,23 @@ export default function (data, children) {
         }
       </div>
 
-      <section class="download">
+      <div class="download">
         <div class="download_item file-wrap">
           <div class="file-wrap_content">
-            <img class="file-wrap_img" src={filePdf} alt="Загрузка файла"></img>
+            <input type="file" class="file-wrap_input" ref="file" />
+            <img 
+              class="file-wrap_img" 
+              src={filePdf} 
+              alt="Загрузка файла"
+              onclick={()=>{
+                this.Ref.file.click();
+              }}
+             />
             <p class="text">Загрузите файл в формате PDF Макс. размером 100 мб</p>
             <button
               class="btn"
-              onclick={() => {
-                this.Static.page = "finish"
-                this.init()
+              onclick={()=>{
+                this.Ref.file.click();
               }}
             >
               Загрузить файл
@@ -111,7 +120,7 @@ export default function (data, children) {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section class="done">
         <div class="done-item">

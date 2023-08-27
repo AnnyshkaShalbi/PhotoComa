@@ -162,9 +162,29 @@ $indent in $indents {
     flex-direction: column;
   }
 
+  @media (max-width: 900px){
+    &-often{
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
   @media (max-width: 840px){
     font-size: 36px;
   }
+
+  @media (max-width: 800px){
+    &-secondary{
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 600px){
+    &-secodary{
+      font-size: 22px;
+    }
+  }
+
 }
 
 .desc {
