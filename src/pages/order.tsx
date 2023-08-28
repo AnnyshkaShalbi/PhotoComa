@@ -104,7 +104,9 @@ export default function (data, children) {
         {
           steps.map((item, index) => {
             return (
-              <div class="steps-item">
+              <div
+                class={["steps-item", item.active ? "steps-item_active" : null]}
+              >
                 <span class={["step", item.active ? "step-active" : null]}>
                   {index + 1}
                 </span>

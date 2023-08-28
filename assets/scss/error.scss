@@ -1,0 +1,29 @@
+.error{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_wrap{
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &_notFound{
+    font-family: 'Tenor Sans';
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  &_image{
+    width: 300px;
+
+    img{
+      width: 100%;
+    }
+  }
+}

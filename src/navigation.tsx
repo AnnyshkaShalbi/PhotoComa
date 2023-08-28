@@ -5,7 +5,7 @@ import Download from "./pages/download";
 import Finish from "./pages/finish";
 import Thanks from "./pages/thanks";
 import Documentation from "./pages/documentation";
-
+import Error from "./pages/error";
 
 export default function () {
   switch (this.Static.page) {
@@ -31,6 +31,10 @@ export default function () {
 
     case "documentation":
       return <Documentation />
+      break;
+
+    case "error":
+      return <Error />
       break;
 
     default:

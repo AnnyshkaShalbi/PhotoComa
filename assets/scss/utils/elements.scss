@@ -135,12 +135,22 @@ $indent in $indents {
     width: 25px;
     height: 25px;
   }
+  @media(max-width: 620px){
+    width: 20px;
+    height: 20px;
+  }
+
 }
 
 .title {
   font-weight: 400;
   font-size: 46px;
   line-height: 60px;
+  font-family: 'Tenor Sans';
+
+  &-often, &-secondary{
+    font-family: 'Tenor Sans';
+  }
 
   &-general{
     text-align: center;
@@ -182,9 +192,24 @@ $indent in $indents {
   @media (max-width: 600px){
     &-secodary{
       font-size: 22px;
+      line-height: 32px;
     }
   }
 
+  @media (max-width: 500px){
+    &-secondary{
+      font-size: 20px;
+    }
+    &-often{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 400px){
+    &-secondary{
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
 }
 
 .desc {
