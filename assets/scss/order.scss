@@ -80,9 +80,21 @@
 .covers {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 
   &-item {
     transition: 0.5s;
+
+    &_title{
+    padding-top: 5px;
+    color: var(--text-secondary);
+    }
+
+    &_price{
+      color: var(--btn-passive);
+      font-size: 18px;
+      line-height: 24px;
+    }
 
     &_img {
       width: 220px;
@@ -112,13 +124,26 @@
 
 // diploma emblems
 .emblems {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 30px;
 
   .emblem {
     &-item {
+      width: 110px;
+
+      &_title{
+        padding-top: 5px;
+        color: var(--text-secondary);
+      }
+
+      &_price{
+        font-size: 18px;
+        line-height: 24px;
+      }
+
       &_img {
-        width: 95px;
+        width: 100%;
         height: 95px;
         background: var(--grey);
         display: flex;
@@ -162,6 +187,36 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  position: relative;
+
+  &_over{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+
+    &-hover{
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    p{
+      font-size: 42px;
+      line-height: 52px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+  }
 
   &_img {
     height: 100px;
@@ -542,6 +597,9 @@
   .form{
     padding-right: 25px;
   }
+  .covers{
+    gap: 20px;
+  }
 }
 
 @media (max-width: 1070px){
@@ -566,7 +624,6 @@
     padding-top: 0;
   }
   .steps{
-    place-items: center;
     gap: 20px;
     padding: 25px 0 35px 0;
   }
@@ -597,6 +654,12 @@
   }
   .form{
     padding: 0;
+  }
+  .covers{
+    display: grid;
+    grid-template-columns: repeat( 3 , 1fr);
+    gap: 20px;
+    place-items: center;
   }
 }
 
@@ -639,6 +702,22 @@
     align-items: center;
     gap: 25px;
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 740px){
+  .covers{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    &-item{
+      &_img{
+        height: auto;
+        width: 100%;
+        padding: 35px;
+        img{
+          width: 90px;  
+        }
+      }
+    }
   }
 }
 
@@ -697,6 +776,18 @@
     &-input{
       padding: 12px;
     }
+  }
+}
+
+@media (max-width: 500px){
+  .order{
+    .desc{
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .emblems{
+    justify-items: center;
   }
 }
 

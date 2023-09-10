@@ -50,9 +50,50 @@ export default function (data, children) {
       </div>
 
       <div class="download">
-        <div class="download_item file-wrap">
+        <div class="download_item file-wrap" ref="fileWrap">
+          <div 
+            class="file-wrap_over"
+            ref="fileWrapOver"
+            ondragover={(e)=>{
+              e.preventDedault();
+              console.log('=2a67f2=',e.dataTransfer.items)
+              let typeFile;
+              [...e.dataTransfer.items].forEach(item => {
+                typeFile = item.type.split("/")[0];
+                if(typeFile == "application/pdf"){
+                  this.Ref.fileWrapOver.classList.add('file-wrap_over-hover');
+                }
+
+              })
+            }}
+
+            ondragleave={()=>{
+              this.Ref.fileWrapOver.classList.remove('file-wrap_over-hover');
+            }}
+          >
+            <p>Перетащите файл</p>
+          </div>
           <div class="file-wrap_content">
-            <input type="file" class="file-wrap_input" ref="file" />
+            <input 
+              type="file" 
+              class="file-wrap_input" 
+              ref="file"
+              onchange={()=>{
+                let typeFile;
+                
+                [...this.Ref.file.files].forEach((file) => {
+                  typeFile = file.type.split("/")[0];
+                  if(typeFile == "application/pdf"){
+
+                    
+                    return true;
+                  }
+                    
+                })
+
+
+              }}
+             />
             <img 
               class="file-wrap_img" 
               src={filePdf} 
@@ -71,6 +112,9 @@ export default function (data, children) {
               Загрузить файл
               <img src={arrowR} />
             </button>
+            <div class="file-wrap_done" ref="fileWrapDone">
+
+            </div>
           </div>
         </div>
         <div class="download_item file-options">

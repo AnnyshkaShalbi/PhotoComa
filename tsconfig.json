@@ -20,6 +20,9 @@
             "@svg/*": [
                 "./src/assets/svg/*.svg"
             ],
+            "@json/*": [
+                "./json/*.json"
+            ],
         },
     },
     "include": [

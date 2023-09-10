@@ -12,7 +12,7 @@ export default function (data, children) {
           href=""
           class="text-primary link"
           onclick={()=>{
-            this.Static.page = "home";
+            this.Static.page = "error";
             this.init();
           }}
         >
